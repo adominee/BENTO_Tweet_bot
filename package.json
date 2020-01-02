@@ -1,0 +1,22 @@
+{
+  "name": "jojoen",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cron": "^1.7.2",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "moment-timezone": "^0.5.27",
+    "twitter": "^1.7.1"
+  },
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.12.1"
+  }
+}

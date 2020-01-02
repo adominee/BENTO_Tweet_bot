@@ -1,0 +1,8 @@
+{
+    "name":"JOJOEN_BENTO",
+    "description":"This app tweet '叙々苑弁当を食べるまでの日数' ",
+    "repository":"",
+    "logo":"",
+    "keywords":["node"],
+    "image":"heroku/nodejs"
+}
