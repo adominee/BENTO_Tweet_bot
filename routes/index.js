@@ -27,5 +27,10 @@ function TweetJOJOEN(){
   return;
 }
 
+function INFONOW(){
+  return moment().format('YYYY年MM月DD日 hh:mm:ss');
+}
 
-module.exports = TweetJOJOEN;
+
+exports.Tweet = TweetJOJOEN;
+exports.INFO_TIME = INFONOW;

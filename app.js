@@ -4,31 +4,26 @@ var createError = require('http-errors');
 var express = require('express');
 
 const PORT = process.env.PORT || 3000;
-const Tweet = require('./routes/index');
+const IndexModule = require('./routes/index');
 const CronJob=require('cron').CronJob;
 
 var app = express();
 //15=0
 const job=new CronJob({
   cronTime:"0 0 0 * * *",
-  onTick:()=>{Tweet()},
+  onTick:()=>{IndexModule.Tweet()},
   onComplete:function(){
     console.log('Tweet Complete');
   },
   timeZone:'Asia/Tokyo',
   start:true
 });
-const job2=new CronJob('* * * * *',()=>{
-  console.info('TEST');
-})
 
 job.start();
-job2.start();
 
 app.get('/', (req, res) => {
   res.send('Server running! '+new Date());
-  console.log("Hearing now! It's "+new Date()+" at now.");
-  console.log('is job running?',job.running);
+  console.log("今は"+IndexModule.INFO_TIME()+" です。");
 }); //ブラウザ確認用
 
 // catch 404 and forward to error handler
