@@ -8,7 +8,6 @@ const IndexModule = require('./routes/index');
 const CronJob=require('cron').CronJob;
 
 var app = express();
-//15=0
 const job=new CronJob({
   cronTime:"0 0 0 * * *",
   onTick:()=>{IndexModule.Tweet()},

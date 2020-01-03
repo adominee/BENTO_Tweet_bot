@@ -28,7 +28,7 @@ function TweetJOJOEN(){
 }
 
 function INFONOW(){
-  return moment().format('YYYY年MM月DD日 hh:mm:ss');
+  return moment().format('YYYY年MM月DD日 HH:mm:ss');
 }
 
 
