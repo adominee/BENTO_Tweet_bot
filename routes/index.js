@@ -17,7 +17,7 @@ const Tclient = new twitter({
 function TweetJOJOEN(){
   var nowDates=moment();
   var Dates=moment(TargetDate).diff(nowDates,'days');
-  Tclient.post('statuses/update',{'status':'今日は'+moment().format('YYYY-MM-DD')+'日です。\n高三の三月が終わるまで'+Dates+'日となりました。'},function (error, tweet, response) {
+  Tclient.post('statuses/update',{'status':'今日は'+moment().format('YYYY-MM-DD')+'日です。\n2022年3月31日まで'+Dates+'日となりました。'},function (error, tweet, response) {
     if (error) throw error;
     if (!error) {
       console.log("success");
