@@ -9,7 +9,7 @@ const CronJob=require('cron').CronJob;
 
 var app = express();
 const job=new CronJob({
-  cronTime:"0 0 0 * * *",
+  cronTime:"0 1 0 * * *",
   onTick:()=>{IndexModule.Tweet()},
   onComplete:function(){
     console.log('Tweet Complete');
@@ -43,5 +43,6 @@ app.use(function(err, req, res, next) {
 
 (process.env.NOW_REGION) ? module.exports = app : app.listen(PORT);
 console.log(`Server running at ${PORT}`);
+console.log(IndexModule.INFO_TIME());
 
 //https://nameless-sands-60204.herokuapp.com/ | https://git.heroku.com/nameless-sands-60204.git
